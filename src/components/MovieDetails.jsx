@@ -14,6 +14,7 @@ const MovieDetails = () => {
   const [isError, setIsError] = useState(false);
 
   const fetchMovieDetails = async () => {
+    setIsLoading(true);
     try {
       let response = await fetch(url + imdbID);
       console.log(response);
